@@ -11,7 +11,7 @@ def getUnique (source)
       .join ","
 end
 
-if __FILE__ == $0
+if __FILE__ == $0 && !ARGV[0].nil?
   File.open(ARGV[0]).each_line do |line|
     if !line.nil?
       puts getUnique line
